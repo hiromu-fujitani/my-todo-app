@@ -20,22 +20,6 @@
 
 
 ## 構成（カスタム部分のみ記載）
-src/
-  atoms/
-    Button.tsx
-  components/
-    molecules/
-      TaskForm.tsx
-      TaskForm.tsx
-      TaskCard.tsx
-      TascCard.css
-    organisms/
-      FilterButtons.tsx
-      TaskList.tsx
-App.tsx
-App.css
-taskhub.png
-
 
 | ファイル名         | 概要                                                         |
 | ------------------ | ------------------------------------------------------------ |
@@ -49,4 +33,3 @@ taskhub.png
 | App.css            | アプリケーション全体のスタイルを定義するCSSファイル。       |
 | taskhub.png        | アプリケーションのロゴイメージ。                             |
 
-これにより、各ファイルが何を担当しているかが詳細に説明されました。
