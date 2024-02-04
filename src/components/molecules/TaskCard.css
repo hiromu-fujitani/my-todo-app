@@ -1,0 +1,70 @@
+/* taskCard.css */
+
+/* タスクカードのスタイル */
+.card.task-card {
+  background-color: white; /* カードの背景色を白に設定 */
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card.task-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card.task-card h5 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card.task-card p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.card.task-card .d-flex {
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ステータスボタンのスタイル */
+.card.task-card .btn-group button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px; /* すべての角を角丸にする */
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.card.task-card .btn-group button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* アクションボタンのスタイル */
+.card.task-card .task-card-actions button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.card.task-card .task-card-actions button:hover {
+  background-color: #dc3545;
+  color: white;
+}
