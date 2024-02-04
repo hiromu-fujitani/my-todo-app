@@ -22,20 +22,35 @@
 ## 構成（カスタム部分のみ記載）
 
 src/
+
   atoms/
+  
     Button.tsx
+
   components/
+  
     molecules/
+    
       TaskForm.tsx
+      
       TaskForm.tsx
+      
       TaskCard.tsx
+      
       TascCard.css
+      
     organisms/
+    
       FilterButtons.tsx
+      
       TaskList.tsx
+      
 App.tsx
+
 App.css
+
 taskhub.png
+
 
 
 
