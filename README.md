@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+## アプリケーションの概要
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+このアプリケーションは、タスク管理を効率的に行うためのものです。ユーザーはタスクを追加、編集、削除し、タスクのステータスを変更できます。
+アプリケーションはAtomic Designパターンに基づいて設計され、BootstrapスタイルとFontAwesomeアイコンが使用されています。また、TypeScript型定義が導入されています。
 
-## Available Scripts
+## 主な実装要素
 
-In the project directory, you can run:
+- Atomic Designパターンの採用
+- Bootstrapスタイルの使用
+- モーダルダイアログの利用
+- FontAwesomeアイコンの使用
+- TypeScript型定義
 
-### `npm start`
+## 主な機能
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- タスク管理機能（追加、編集、削除、ステータス変更）
+- タスクのステータス管理（未着手、着手中、完了）
+- ステータスのフィルタリング機能
+- 編集と削除のモーダル
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## 構成（カスタム部分のみ記載）
+src/
+  atoms/
+    Button.tsx
+  components/
+    molecules/
+      TaskForm.tsx
+      TaskForm.tsx
+      TaskCard.tsx
+      TascCard.css
+    organisms/
+      FilterButtons.tsx
+      TaskList.tsx
+App.tsx
+App.css
+taskhub.png
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+| ファイル名         | 概要                                                         |
+| ------------------ | ------------------------------------------------------------ |
+| Button.tsx         | ボタン要素を表現する`Button`コンポーネント。ボタンの表示とクリック時の処理を担当。 |
+| TaskForm.tsx       | タスクの新規作成フォームを提供するコンポーネント。タスクのタイトルと説明を入力し、新しいタスクを追加できる。 |
+| TaskCard.tsx       | タスク情報をカード形式で表示し、編集や削除が可能なコンポーネント。タスクの詳細情報やステータスの変更ができる。 |
+| TaskCard.css       | `TaskCard`コンポーネントのスタイルを定義するCSSファイル。 |
+| FilterButtons.tsx  | タスクのフィルタリングを行うボタンコンポーネント。すべてのタスク、未着手のタスク、着手中のタスク、完了したタスクの表示切り替えを提供。 |
+| TaskList.tsx       | タスク一覧を表示し、タスクの操作（編集、削除、ステータス変更）を可能にするコンポーネント。 |
+| App.tsx            | アプリケーションのメインコンポーネント。全体のレイアウトを提供し、各コンポーネントを組み合わせてアプリケーションを構築。 |
+| App.css            | アプリケーション全体のスタイルを定義するCSSファイル。       |
+| taskhub.png        | アプリケーションのロゴイメージ。                             |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+これにより、各ファイルが何を担当しているかが詳細に説明されました。
