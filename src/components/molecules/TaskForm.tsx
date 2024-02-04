@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Task } from '../../types'; 
+import { Task } from '../../types';
 
 interface TaskFormProps {
   onAddTask: (newTask: Task) => void;
@@ -8,9 +8,26 @@ interface TaskFormProps {
 const TaskForm: React.FC<TaskFormProps> = ({ onAddTask }) => {
   const [newTaskTitle, setNewTaskTitle] = useState('');
   const [newTaskDescription, setNewTaskDescription] = useState('');
+  const [titleError, setTitleError] = useState('');
+  const [descriptionError, setDescriptionError] = useState('');
 
   const addTask = () => {
-    if (!newTaskTitle || !newTaskDescription) {
+    let isValid = true;
+    if (!newTaskTitle) {
+      setTitleError('タイトルを入力してください');
+      isValid = false;
+    } else {
+      setTitleError('');
+    }
+
+    if (!newTaskDescription) {
+      setDescriptionError('説明を入力してください');
+      isValid = false;
+    } else {
+      setDescriptionError('');
+    }
+
+    if (!isValid) {
       return;
     }
 
@@ -36,6 +53,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ onAddTask }) => {
         value={newTaskTitle}
         onChange={(e) => setNewTaskTitle(e.target.value)}
       />
+      {titleError && <div style={{ color: 'red' }}>{titleError}</div>}
       <input
         type="text"
         className="form-control mt-2 custom-input"
@@ -43,6 +61,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ onAddTask }) => {
         value={newTaskDescription}
         onChange={(e) => setNewTaskDescription(e.target.value)}
       />
+      {descriptionError && <div style={{ color: 'red' }}>{descriptionError}</div>}
       <div className="add-button-container">
         <button className="custom-button" onClick={addTask}>
           タスクを追加
