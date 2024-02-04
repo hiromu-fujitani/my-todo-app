@@ -21,6 +21,24 @@
 
 ## 構成（カスタム部分のみ記載）
 
+src/
+  atoms/
+    Button.tsx
+  components/
+    molecules/
+      TaskForm.tsx
+      TaskForm.tsx
+      TaskCard.tsx
+      TascCard.css
+    organisms/
+      FilterButtons.tsx
+      TaskList.tsx
+App.tsx
+App.css
+taskhub.png
+
+
+
 | ファイル名         | 概要                                                         |
 | ------------------ | ------------------------------------------------------------ |
 | Button.tsx         | ボタン要素を表現する`Button`コンポーネント。ボタンの表示とクリック時の処理を担当。 |
