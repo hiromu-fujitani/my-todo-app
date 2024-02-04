@@ -22,8 +22,11 @@
 ## 構成（カスタム部分のみ記載）
 
 App.tsx
+
 App.css
+
 taskhub.png
+
 src/
   atoms/
     Button.tsx
